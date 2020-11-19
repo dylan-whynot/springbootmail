@@ -53,7 +53,7 @@ class SpringbootmailApplicationTests {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("<html><head></head>")
                 .append("<body><h1>测试邮件　无附件含html</h1><p>测试邮件　无附件含html 这是测试的文本内容</p></body>").append("</html>");
-        Mail mail = Mail.builder().sendTo(new String[]{"haiyang.wu@inossem.com", "944247756@qq.com"})
+        Mail mail = Mail.builder().sendTo(new String[]{"", ""})
                 .subject("测试主题　无附件html").html(Boolean.TRUE).text(stringBuilder.toString()).personalName("另启用别名").build();
         mailService.sendMail(mail);
     }
